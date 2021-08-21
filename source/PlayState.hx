@@ -850,13 +850,13 @@ class PlayState extends MusicBeatState
 						add(skyy);
 
 						var rocksa:FlxSprite = new FlxSprite(-100, -200).loadGraphic(Paths.image('hills'));
-						rocksa.setGraphicSize(Std.int(rocksa.width * 0.6));
+						rocksa.setGraphicSize(Std.int(rocksa	.width * 0.6));
 						rocksa.antialiasing = FlxG.save.data.antialiasing;
 						rocksa.scrollFactor.set(0.85, 0.85);
 						rocksa.active = false;
 						add(rocksa);
 
-						var bg:FlxSprite = new FlxSprite(-100, -200).loadGraphic(Paths.image('house'));
+						var bg:FlxSprite = new FlxSprite(-200, -300).loadGraphic(Paths.image('house'));
 						bg.setGraphicSize(Std.int(bg.width * 0.6));
 						bg.antialiasing = FlxG.save.data.antialiasing;
 						bg.scrollFactor.set(0.9, 0.9);
@@ -935,6 +935,8 @@ class PlayState extends MusicBeatState
 
 			case "spooky":
 				dad.y += 200;
+			case "perry":
+				dad.y += 250;
 			case "monster":
 				dad.y += 100;
 			case 'monster-christmas':

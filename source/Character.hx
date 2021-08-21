@@ -109,6 +109,21 @@ class Character extends FlxSprite
 				loadOffsetFile(curCharacter);
 
 				playAnim('idle');
+
+			case 'perry':
+				// scary larrys brother
+				tex = Paths.getSparrowAtlas('perry','shared',true);
+				frames = tex;
+				animation.addByPrefix('idle', 'GnaIdle', 24, false);
+				animation.addByPrefix('singUP', 'GnaUp', 24, false);
+				animation.addByPrefix('singRIGHT', 'GnaRight', 24, false);
+				animation.addByPrefix('singDOWN', 'GnaDown', 24, false);
+				animation.addByPrefix('singLEFT', 'GnaLeft', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('idle');
+
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('spooky_kids_assets','shared',true);
 				frames = tex;
