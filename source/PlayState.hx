@@ -837,6 +837,35 @@ class PlayState extends MusicBeatState
 							add(waveSpriteFG);
 						 */
 					}
+				case 'phineas':					
+					
+					defaultCamZoom = 0.9;
+					curStage = 'phineas';
+
+					var sky:FlxSprite = new FlxSprite(-544.35, -504.35).loadGraphic('stage/sky', 'gna');
+					sky.updateHitbox();
+					sky.antialiasing = FlxG.save.data.antialiasing;
+					sky.scrollFactor.set(0, 0);
+					add(sky);
+
+					var hills:FlxSprite = new FlxSprite(-251.9, -282.45).loadGraphic('stage/hills', 'gna');
+					hills.updateHitbox();
+					hills.antialiasing = FlxG.save.data.antialiasing;
+					hills.scrollFactor.set(0.7, 0.7);
+					add(hills);
+
+					var house:FlxSprite = new FlxSprite(49.3, -373.05).loadGraphic('stage/house', 'house');
+					house.updateHitbox();
+					house.antialiasing = FlxG.save.data.antialiasing;
+					house.scrollFactor.set(0.8, 0.8);
+					add(house);
+
+					var bitch:FlxSprite = new FlxSprite(-270.1, -513.25).loadGraphic('stage/fg', 'gna');
+					bitch.updateHitbox();
+					bitch.antialiasing = FlxG.save.data.antialiasing;
+					bitch.scrollFactor.set(1, 1);
+					add(bitch);
+
 				default:
 					{
 						defaultCamZoom = 0.9;
@@ -998,6 +1027,10 @@ class PlayState extends MusicBeatState
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+			case 'phineas':
+				boyfriend.setPosition(870.95, 226.7);
+				gf.setPosition(304.25, -150.35);
+				dad.setPosition(-15.5, 158.3);
 			case 'schoolEvil':
 				boyfriend.x += 200;
 				boyfriend.y += 220;
