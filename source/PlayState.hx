@@ -841,17 +841,33 @@ class PlayState extends MusicBeatState
 					{
 						defaultCamZoom = 0.9;
 						curStage = 'stage';
-						var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback'));
+
+						var skyy:FlxSprite = new FlxSprite(-100, -200).loadGraphic(Paths.image('sky'));
+						skyy.setGraphicSize(Std.int(skyy.width * 0.6));
+						skyy.antialiasing = FlxG.save.data.antialiasing;
+						skyy.scrollFactor.set(0.85, 0.85);
+						skyy.active = false;
+						add(skyy);
+
+						var rocksa:FlxSprite = new FlxSprite(-100, -200).loadGraphic(Paths.image('hills'));
+						rocksa.setGraphicSize(Std.int(rocksa.width * 0.6));
+						rocksa.antialiasing = FlxG.save.data.antialiasing;
+						rocksa.scrollFactor.set(0.85, 0.85);
+						rocksa.active = false;
+						add(rocksa);
+
+						var bg:FlxSprite = new FlxSprite(-100, -200).loadGraphic(Paths.image('house'));
+						bg.setGraphicSize(Std.int(bg.width * 0.6));
 						bg.antialiasing = FlxG.save.data.antialiasing;
 						bg.scrollFactor.set(0.9, 0.9);
 						bg.active = false;
 						add(bg);
 
-						var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront'));
-						stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+						var stageFront:FlxSprite = new FlxSprite(-100, -200).loadGraphic(Paths.image('backyard'));
+						stageFront.setGraphicSize(Std.int(stageFront.width * 0.6));
 						stageFront.updateHitbox();
 						stageFront.antialiasing = FlxG.save.data.antialiasing;
-						stageFront.scrollFactor.set(0.9, 0.9);
+						stageFront.scrollFactor.set(1, 1);
 						stageFront.active = false;
 						add(stageFront);
 
@@ -862,7 +878,7 @@ class PlayState extends MusicBeatState
 						stageCurtains.scrollFactor.set(1.3, 1.3);
 						stageCurtains.active = false;
 
-						add(stageCurtains);
+						
 					}
 			}
 		}
